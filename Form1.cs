@@ -20,11 +20,23 @@ namespace ticTakToe
 
         private void button_Click(object sender, EventArgs e)
         {
+            Button senderB = (Button)sender;
             if (xTurn) 
             { 
-                Button senderB = (Button)sender;
                 senderB.Text = "X";
             }
+            else
+            {
+                senderB.Text = "O";
+            }
+            xTurn = !xTurn;
+            senderB.Enabled = false;
+            checkWin();
+        }
+        void checkWin()
+        {
+            if(button1.Text == button2.Text && button2.Text == button3.Text)
+            MessageBox.Show("Победа!");
         }
     }
 }
