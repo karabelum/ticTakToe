@@ -31,12 +31,50 @@ namespace ticTakToe
             }
             xTurn = !xTurn;
             senderB.Enabled = false;
-            checkWin();
+            checkWin(senderB);
         }
-        void checkWin()
+        void checkWin(Button pressedButton)
         {
-            if(button1.Text == button2.Text && button2.Text == button3.Text)
-            MessageBox.Show("Победа!");
+            if(button1.Text == button2.Text && button2.Text == button3.Text && button2.Enabled == false) 
+            { 
+                MessageBox.Show("Победа " + pressedButton.Text);
+                Application.Restart();
+            }
+            if (button4.Text == button5.Text && button5.Text == button6.Text && button5.Enabled == false)
+            {
+                MessageBox.Show("Победа " + pressedButton.Text);
+                Application.Restart();
+            }
+            if (button7.Text == button8.Text && button8.Text == button9.Text && button8.Enabled == false )
+            {
+                MessageBox.Show("Победа " + pressedButton.Text);
+                Application.Restart();
+            }
+            if (button1.Text == button5.Text && button5.Text == button9.Text && button5.Enabled == false)
+            {
+                MessageBox.Show("Победа " + pressedButton.Text);
+                Application.Restart();
+            }
+            if (button3.Text == button5.Text && button5.Text == button7.Text && button5.Enabled == false)
+            {
+                MessageBox.Show("Победа " + pressedButton.Text);
+                Application.Restart();
+            }
+            if (button1.Text == button4.Text && button4.Text == button7.Text && button4.Enabled == false)
+            {
+                MessageBox.Show("Победа " + pressedButton.Text);
+                Application.Restart();
+            }
+            if (button2.Text == button5.Text && button5.Text == button8.Text && button5.Enabled == false)
+            {
+                MessageBox.Show("Победа " + pressedButton.Text);
+                Application.Restart();
+            }
+            if (button3.Text == button6.Text && button6.Text == button9.Text && button6.Enabled == false)
+            {
+                MessageBox.Show("Победа " + pressedButton.Text);
+                Application.Restart();
+            }
         }
     }
 }
